@@ -1,22 +1,21 @@
-import "./login.css";
+// import "./login.css";
 
 export default function LoginComponent() {
     return (
-        <div className="container">
-            <form>
-                <h2 style={{textAlign:"center"}}> User Login </h2>
+        <div className="container-fluid d-flex justify-content-center align-items-center" style={{height:"100vh"}}>
+            <form className="border border-2 mt-4 p-3 rounded rounded-2 w-25 shadow">
+                <h2 style={{textAlign:"center"}}> <span className="bi bi-person-fill text-dark"></span> User Login </h2>
                 <hr/>
                 <div >
                     <label for="userId"> User Id: </label>
-                    <input type="text" id="userId"></input>
+                    <input type="text" id="userId" className="form-control"></input>
                 </div>
                 <div>
                     <label for="userPassword"> Password: </label>
-                    <input type="password" id="userPassword"></input>
+                    <input type="password" id="userPassword" className="form-control"></input>
                 </div>
                 <div style={{textAlign:"center"}}>
-                <button> Login </button>
-                <button> Cancel </button>
+                <button className="btn btn-primary w-100 mt-3"> Login <span className="bi bi-arrow-right-short"></span> </button>
                 </div>
             </form>
         </div>
