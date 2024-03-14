@@ -5,7 +5,7 @@ export function InclineMain(){
             <h2> Landing pages for any occasion </h2>
             <h5> Incline is set of landing and support pages aimed at helping companies promote new products and business launches. </h5>
 
-            <button className="btn btn-lg btn-outline-warning"> PURCHASE NOW </button>
+            <button className="btn btn-lg bg-transparent btn-outline-warning"> PURCHASE NOW </button>
         </div>
     )
 }
