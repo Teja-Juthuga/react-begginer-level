@@ -10,18 +10,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // Bootstrap Icons
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-import { Navbar } from './Components/Navbar/nav';
-
 import { NetflixIndex } from './Components/Netflix/netflix-index';
 
 import LoginComponent from './Components/Login/login';
 
 import { InclineIndex } from './Components/Incline/incline-index';
+import { DataBinding } from './Components/data-binding/data-binding';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <InclineIndex />
+    <DataBinding />
   </React.StrictMode>
 );
 
