@@ -21,6 +21,11 @@ export function DataBinding(){
         ]
     }
 
+    var menu = [
+        {"Category":"Electronics", "Products": ["TV", "Mobile", "Watch"]},
+        {"Category":"Footwear", "Products": ["Casuals", "Sneakers", "Boots"]}
+   ];
+
     return(
         <div className="container mt-4">
             <dl>
@@ -103,6 +108,25 @@ export function DataBinding(){
                     </div>
                 </div>
             </div>
+
+            <div className="container-fluid">
+            <h2>Menu</h2>
+            <select>
+                {
+                    menu.map(item=>
+                         <optgroup label={item.Category}>
+                            {
+                                item.Products.map(product=>
+                                    <option>{product}</option>
+                                    )
+                            }
+                         </optgroup>
+                        )
+                }
+            </select>
+        </div>
+
+
         </div>
     )
 }
