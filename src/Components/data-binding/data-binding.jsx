@@ -31,6 +31,13 @@ export function DataBinding() {
         { Category: "Footwear", Products: ["Casuals", "Sneakers", "Boots"] },
     ];
 
+    var topics = [
+        {"title": "HTML", "description": "It is a markup language"},
+        {"title": "CSS", "description": "It configures styles for HTML"}
+    ];
+
+    var numbers = [[10,20,30] , [40,50,60]];
+
     return (
         <div className="container mt-4">
             <dl>
@@ -145,6 +152,31 @@ export function DataBinding() {
                     )
                 }
             </ol>
+
+            <dl>
+                {
+                    topics.map(topic => 
+                            <>
+                                <dt> {topic.title} </dt>
+                                <dd> {topic.description} </dd>
+                            </>
+                        )
+                }
+            </dl>
+
+            <tablets>
+                {
+                    numbers.map(number =>
+                        <tr>
+                            {
+                                number.map(num => 
+                                    <td> {num} </td>    
+                                )
+                            }
+                        </tr>    
+                    )
+                }
+            </tablets>
         </div>
     );
 }
